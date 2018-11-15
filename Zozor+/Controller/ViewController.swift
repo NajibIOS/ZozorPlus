@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       // count.displayAlertDelegate = self
+        count.displayAlertDelegate = self
     }
 
     // MARK: - Action
@@ -57,11 +57,11 @@ class ViewController: UIViewController {
   
 }
 
-//extension ViewController: DisplayAlert {
-//    func showAlert(message: String) {
-//        let alertVC = UIAlertController(title: "Zéro!", message: message, preferredStyle: .alert)
-//        alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-//        present(alertVC, animated: true, completion: nil)
-//    }
+extension ViewController: DisplayAlert {
+    func showAlert(message: String) {
+        let alertVC = UIAlertController(title: "Zéro!", message: message, preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        present(alertVC, animated: true, completion: nil)
+    }
 
-//}
+}

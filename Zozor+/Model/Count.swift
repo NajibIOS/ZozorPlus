@@ -8,16 +8,16 @@
 //
 //import Foundation
 //
-//protocol DisplayAlert {
-//    func showAlert(message : String)
-//}
+protocol DisplayAlert {
+    func showAlert(message : String)
+}
 //
 class Count {
 
     // MARK: - Properties
     var stringNumbers: [String] = [String()]
     var operators: [String] = ["+"]
-   // var displayAlertDelegate : DisplayAlert?
+    var displayAlertDelegate : DisplayAlert?
    // var squareRootFour = sqrt
 
     //
@@ -25,9 +25,9 @@ class Count {
         if let stringNumber = stringNumbers.last {
             if stringNumber.isEmpty {
                 if stringNumbers.count == 1 {
-                 // displayAlertDelegate?.showAlert(message: "Démarrer un nouveau calcul")
+                 displayAlertDelegate?.showAlert(message: "Démarrer un nouveau calcul")
                 } else {
-                // displayAlertDelegate?.showAlert(message: "Entrez une expression correcte !")
+                displayAlertDelegate?.showAlert(message: "Entrez une expression correcte !")
 
                  }
                 return false
@@ -40,7 +40,7 @@ class Count {
     var canAddOperator: Bool {
         if let stringNumber = stringNumbers.last {
             if stringNumber.isEmpty {
-            // displayAlertDelegate?.showAlert(message: "Expression incorrecte")
+             displayAlertDelegate?.showAlert(message: "Expression incorrecte")
                 return false
             }
         }
