@@ -6,7 +6,7 @@
 ////  Copyright © 2018 Ambroise Collon. All rights reserved.
 ////
 //
-//import Foundation
+  import Foundation
 //
 protocol DisplayAlert {
     func showAlert(message : String)
@@ -18,7 +18,7 @@ class Count {
     var stringNumbers: [String] = [String()]
     var operators: [String] = ["+"]
     var displayAlertDelegate : DisplayAlert?
-   // var squareRootFour = sqrt
+    
 
     //
     var isExpressionCorrect: Bool {
@@ -64,13 +64,20 @@ class Count {
         return updateDisplay()
     }
 //
-    func squareAction() -> String {
-         if canAddOperator {
-            operators.append("√")
-            stringNumbers.append("")
-         }
-        return updateDisplay()
-    }
+//    func squareAction() -> String {
+//         if canAddOperator {
+//            guard let result = Double(calculateTotal()) else {return updateDisplay()}
+//            clear()
+//            let squareValue = sqrt(result)
+//            if let stringNumber = stringNumbers.last {
+//                var stringNumberMutable = stringNumber
+//                stringNumberMutable += "\(squareValue)"
+//                stringNumbers[stringNumbers.count-1] = stringNumberMutable
+//            }
+//            return String(squareValue)
+//         }
+//        return updateDisplay()
+//    }
 
     // For Add Number
 
@@ -97,10 +104,7 @@ class Count {
                     total += number
                 } else if operators[i] == "-" {
                     total -= number
-                } else if operators[i] == "√" {
-
-                    //total = sqrt(number)
-                }
+                } 
             }
         }
 

@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        count.displayAlertDelegate = self
+//        count.displayAlertDelegate = self
     }
 
     // MARK: - Action
@@ -43,25 +43,22 @@ class ViewController: UIViewController {
         textView.text = count.calculateTotal()
     }
     
-    @IBAction func squareRoot(_ sender: UIButton) {
-        textView.text = count.squareAction()
-      }
-    
+//    @IBAction func squareRoot(_ sender: UIButton) {
+//        textView.text = count.squareAction()
+//      }
+//
+// // To Reset The Calculator
+//    @IBAction func AllClear(_ sender: UIButton) {
+//        count.clear()
+//        textView.text = "0"
+//    }
+//}
 
-
-    // MARK: - Methods
-
-    
-
-   
-  
-}
-
-extension ViewController: DisplayAlert {
-    func showAlert(message: String) {
-        let alertVC = UIAlertController(title: "Zéro!", message: message, preferredStyle: .alert)
-        alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-        present(alertVC, animated: true, completion: nil)
-    }
-
+//extension ViewController: DisplayAlert {
+//    func showAlert(message: String) {
+//        let alertVC = UIAlertController(title: "Zéro!", message: message, preferredStyle: .alert)
+//        alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+//        present(alertVC, animated: true, completion: nil)
+//    }
+//
 }
