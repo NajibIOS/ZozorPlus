@@ -64,4 +64,13 @@ class Zozor_Tests: XCTestCase {
         XCTAssertEqual(count.calculateTotal(), "")
 
     }
+    
+    func testSquare_When_ThenCalculIsCorrect(){
+        let _ = count.addNewNumber(7)
+        let _ = count.plusAction()
+        let _ = count.addNewNumber(42)
+        let result = count.squareAction()
+        
+        XCTAssertEqual(result, "7.0")
+    }
 }
