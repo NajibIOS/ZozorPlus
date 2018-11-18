@@ -64,20 +64,20 @@ class Count {
         return updateDisplay()
     }
 //
-//    func squareAction() -> String {
-//         if canAddOperator {
-//            guard let result = Double(calculateTotal()) else {return updateDisplay()}
-//            clear()
-//            let squareValue = sqrt(result)
-//            if let stringNumber = stringNumbers.last {
-//                var stringNumberMutable = stringNumber
-//                stringNumberMutable += "\(squareValue)"
-//                stringNumbers[stringNumbers.count-1] = stringNumberMutable
-//            }
-//            return String(squareValue)
-//         }
-//        return updateDisplay()
-//    }
+    func squareAction() -> String {
+         if canAddOperator {
+            guard let result = Double(calculateTotal()) else {return updateDisplay()}
+            clear()
+            let squareValue = sqrt(result)
+            if let stringNumber = stringNumbers.last {
+                var stringNumberMutable = stringNumber
+                stringNumberMutable += "\(squareValue)"
+                stringNumbers[stringNumbers.count-1] = stringNumberMutable
+            }
+            return String(squareValue)
+         }
+        return updateDisplay()
+    }
 
     // For Add Number
 
